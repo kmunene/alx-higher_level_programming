@@ -1,0 +1,14 @@
+#!/bin/bash
+
+pyfile=$PYFILE
+pycfile="${pyfile%.*}.pyc"
+
+echo "Compiling $pyfile ..."
+python3 -m compileall $pyfile > /dev/null
+
+if [ -f "$pycfile" ]; then
+    echo "$pyfile compiled successfully as $pycfile"
+else
+    echo "Compilation failed"
+fi
+

@@ -1,19 +1,18 @@
 #!/usr/bin/python3
 
+# AUTHOR - kelvin munene
 
-# Author: kelvin
+'''A Square class'''
 
 
 class Square:
-    '''innitialize the class'''
+    '''This is a class with a private square attribute and public method'''
     def __init__(self, size=0):
+        if not isinstance(size, int):
+            raise TypeError('size must be an integer')
+        if (size < 0):
+            raise ValueError('size must be >= 0')
         self.__size = size
-        if (type(size) is not int):
-            raise TypeError("size must be an integer")
-        elif (size < 0):
-            raise ValueError("size must be >= 0")
 
     def area(self):
-        '''returns area'''
-        s = self.__size * self.__size
-        return s
+        return (self.__size ** 2)

@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-
-# AUTHOR - Ami Manye
-
 '''An empty class Square'''
 
 

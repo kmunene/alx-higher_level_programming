@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-'''empty class'''
+
+
+'''A Square class'''
 
 class Square:
-    '''this class has all files'''
-    pass
-
-    def __init__(self, value):
-        self.__size = value
+    '''This is a class with a private square attribute'''
+    def __init__(self, size):
+        self.__size = size

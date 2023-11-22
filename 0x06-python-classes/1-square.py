@@ -2,6 +2,7 @@
 '''empty class'''
 
 class Square:
+    '''this class has all files'''
     pass
 
     def __init__(self, value):

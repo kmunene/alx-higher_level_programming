@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+# Author: kelvin
+
+
 class Node:
     """Represent a node in a singly-linked list."""
 

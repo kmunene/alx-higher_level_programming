@@ -9,8 +9,8 @@ class Rectangle:
         width (int): The width of the rectangle.
         height (int): The height of the rectangle.
 
-    Author: [Your Name]
-    Date: [Date]
+    Author: kelvin munene
+    Date: 11/27/2023
 
     """
 
@@ -27,13 +27,13 @@ class Rectangle:
             ValueError: If width or height is less than 0.
 
         """
-        if not isinstance(width, int):
+        if type(width) is not int:
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
         self.__width = width
 
-        if not isinstance(height, int):
+        if type(height) is not int:
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be >= 0")
@@ -63,7 +63,7 @@ class Rectangle:
             ValueError: If the value is less than 0.
 
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -93,7 +93,7 @@ class Rectangle:
             ValueError: If the value is less than 0.
 
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
@@ -118,5 +118,8 @@ class Rectangle:
             int: The perimeter of the rectangle.
 
         """
-        P = (self.__width * 2) + (self.__height * 2)
-        return P
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else:
+            P = (self.__width * 2) + (self.__height * 2)
+            return P
